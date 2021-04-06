@@ -27,3 +27,7 @@ To execute the normalization and bring the images to a mean value of 128:
 ```
 gcloud dataproc jobs submit pyspark --cluster cluster brightness.py -- gs://bucket/boxes gs://bucket/output 128
 ```
+
+![New Folder](./img/after.png)
+
+The output is in `part-xxxx` files in the output directory (can be just one file, it depends on the size), each line is a normalized image as a vector.
